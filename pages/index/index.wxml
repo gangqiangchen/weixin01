@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <span class="user-span" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 信息加载中... </span>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <button bindtap="bindViewTap2" class="user-button">{{motto}}</button>
+  </view>
+</view>

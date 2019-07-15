@@ -1,0 +1,9 @@
+<!--pages/test/test.wxml-->
+<view class="test-view">
+    <!-- <view class="title">情绪评定</view> -->
+    <view class="test-center" wx:for="{{list}}" wx:for-index="idx">
+        <text>{{list[idx][3]}}</text>
+        <a class="test-a" bindtap="bindViewTap">测验</a>
+    </view>
+</view>
+
